@@ -23,7 +23,7 @@ COPY --from=deps /app/package.json ./package.json
 COPY . .
 
 # Build the Next.js app (output to .next)
-RUN bun run --bun build
+RUN bun run build
 RUN sh -c "if [ -d public ]; then cp -r public .next/standalone/; fi"
 RUN sh -c "if [ -d .next/static ]; then cp -r .next/static .next/standalone/.next/static; fi"
 
