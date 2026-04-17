@@ -92,7 +92,6 @@ export const lines: LineData[] = [
     color: "Prata",
     company: "metro",
   },
-  ,
   {
     code: 17,
     color: "Ouro",
