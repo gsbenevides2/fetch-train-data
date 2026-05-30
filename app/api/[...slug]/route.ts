@@ -5,7 +5,7 @@ import { coolifyHealthChecker } from "@/app/plugins/coolify-healtcheker";
 import { getProjectInfo } from "@/app/utils/getProjectInfo";
 import openapi from "@elysiajs/openapi";
 import { Elysia, t } from "elysia";
-import { UnauthorizedError, AuthService } from "@/app/services/AuthService";
+import { UnauthorizedError, AuthService, isAuthSecretAvailable } from "@/app/services/AuthService";
 
 const app = new Elysia({
   prefix: "/api",
@@ -47,6 +47,12 @@ const app = new Elysia({
   )
   .use(coolifyHealthChecker)
   .onBeforeHandle(async ({ headers }) => {
+    // Regra: se a variável de autenticação (AUTH_SECRET) estiver ausente/vazia,
+    // o acesso deve ser livre (fallback solicitado).
+    if (!isAuthSecretAvailable()) {
+      return;
+    }
+
     const token = headers?.authorization;
     if (!token) {
       throw new UnauthorizedError();

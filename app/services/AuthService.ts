@@ -1,7 +1,10 @@
 import { StatusMap } from "elysia";
-import { getEnv } from "@/app/utils/getEnv";
 
-const AUTH_SECRET = getEnv("AUTH_SECRET");
+const AUTH_SECRET = Bun.env.AUTH_SECRET;
+
+export function isAuthSecretAvailable(): boolean {
+  return typeof AUTH_SECRET === "string" && AUTH_SECRET.trim().length > 0;
+}
 
 export class AuthService {
   static async verify(secret: string) {
