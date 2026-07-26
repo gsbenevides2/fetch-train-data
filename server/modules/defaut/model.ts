@@ -9,6 +9,7 @@ export const DefaultModel = {
       cptm: "cptm",
       ccr: "ccr",
       tic: "tic",
+      liauni: "liauni",
     }),
   }),
   // Get Processed Data Response
