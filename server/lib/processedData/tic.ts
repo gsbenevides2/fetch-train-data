@@ -1,8 +1,8 @@
 // TIC Trens possui apenas a linha 7, que é a linha 7 do TIC Trens
-import { lines } from "@/app/lib/processedData/constants";
-import { ProcessedDataLine } from "@/app/lib/processedData/types";
-import { getStatus } from "@/app/lib/processedData/utils";
-import { fetchTrainDataFromTIC } from "@/app/lib/tic";
+import { lines } from "@/server/lib/processedData/constants";
+import { ProcessedDataLine } from "@/server/lib/processedData/types";
+import { getStatus } from "@/server/lib/processedData/utils";
+import { fetchTrainDataFromTIC } from "@/server/lib/tic";
 
 export async function processTICLines() {
   const line = lines.find((line) => line.company === "tic");

@@ -1,16 +1,16 @@
-import { fetchTrainDataFromCCR } from "@/app/lib/ccr";
-import { fetchTrainDataFromCPTM } from "@/app/lib/cptm";
-import { fetchTrainDataFromMetro } from "@/app/lib/metro";
-import { fetchTrainDataFromTIC } from "@/app/lib/tic";
+import { fetchTrainDataFromCCR } from "@/server/lib/ccr";
+import { fetchTrainDataFromCPTM } from "@/server/lib/cptm";
+import { fetchTrainDataFromMetro } from "@/server/lib/metro";
+import { fetchTrainDataFromTIC } from "@/server/lib/tic";
 import {
   CompanyFethersObjects,
   CompanyProcessorsObjects,
   LineData,
-} from "@/app/lib/processedData/types";
-import { processMetroLines } from "@/app/lib/processedData/metro";
-import { processCPTMLines } from "@/app/lib/processedData/cptm";
-import { processCCRLines } from "@/app/lib/processedData/ccr";
-import { processTICLines } from "@/app/lib/processedData/tic";
+} from "@/server/lib/processedData/types";
+import { processMetroLines } from "@/server/lib/processedData/metro";
+import { processCPTMLines } from "@/server/lib/processedData/cptm";
+import { processCCRLines } from "@/server/lib/processedData/ccr";
+import { processTICLines } from "@/server/lib/processedData/tic";
 
 export const companiesFetchers: CompanyFethersObjects = {
   metro: fetchTrainDataFromMetro,

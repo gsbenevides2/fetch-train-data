@@ -1,9 +1,16 @@
 {
-  "name": "fetch-train-data",
+  "name": "@gsbenevides2/fetch-train-data",
+  "displayName": "Fetch Train Data",
   "description": "Fetch train data from the metropolitan train in the city of São Paulo.",
-  "version": ".1.0",
-  "private": true,
+  "version": "2.0.0",
+  "private": false,
   "license": "MIT",
+  "types": "./dist/server/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/server/index.d.ts"
+    }
+  },
   "author": {
     "name": "Guilherme da Silva Benevides",
     "email": "git@gui.dev.br",
@@ -17,23 +24,24 @@
     "dev": "bun --bun next dev",
     "build": "bun --bun next build",
     "start": "bun --bun next start",
-    "lint": "eslint"
+    "lint": "bun --bun eslint"
   },
   "dependencies": {
-    "@elysiajs/openapi": "^1.4.13",
-    "elysia": "^1.4.21",
-    "happy-dom": "^20.1.0",
+    "@elysia/openapi": "^1.4.15",
+    "elysia": "^1.4.29",
+    "happy-dom": "^20.11.1",
     "next": "16.1.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/bun": "^1.3.5",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@types/bun": "^1.3.14",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.1.1",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   },
   "ignoreScripts": [
     "sharp",
@@ -42,5 +50,8 @@
   "trustedDependencies": [
     "sharp",
     "unrs-resolver"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }

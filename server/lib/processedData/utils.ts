@@ -1,4 +1,4 @@
-import { Status } from "@/app/lib/processedData/types";
+import { Status } from "@/server/lib/processedData/types";
 
 export function getStatus(situation: string): Status {
   const lowerSituation = situation.toLowerCase();

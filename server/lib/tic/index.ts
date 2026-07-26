@@ -1,7 +1,7 @@
 import {
   TICLineStatusesResponse,
   TICOwnerLineResponse,
-} from "@/app/lib/tic/types";
+} from "@/server/lib/tic/types";
 
 export async function fetchTrainDataFromTIC() {
   const toJson = (response: Response) => response.json();
@@ -11,11 +11,11 @@ export async function fetchTrainDataFromTIC() {
   const [lineStatuses, ownerLineStatuses] = (await Promise.all([
     fetch(
       "https://www.tictrens.com.br/helper/line-statuses",
-      fetchOptions
+      fetchOptions,
     ).then(toJson),
     fetch(
       "https://www.tictrens.com.br/helper/owner-line-statuses",
-      fetchOptions
+      fetchOptions,
     ).then(toJson),
   ])) as [TICLineStatusesResponse, TICOwnerLineResponse];
   return { lineStatuses, ownerLineStatuses };
