@@ -1,5 +1,5 @@
 import { Browser } from "happy-dom";
-import { Metroline } from "@/app/lib/metro/types";
+import { Metroline } from "@/server/lib/metro/types";
 
 export async function fetchTrainDataFromMetro() {
   const browser = new Browser();
@@ -7,15 +7,15 @@ export async function fetchTrainDataFromMetro() {
   try {
     const page = browser.newPage();
     await page.goto(
-      "https://www.metro.sp.gov.br/wp-content/themes/metrosp/direto-metro.php"
+      "https://www.metro.sp.gov.br/wp-content/themes/metrosp/direto-metro.php",
     );
     const lines = page.mainFrame.document.querySelectorAll(
-      ".direto-metro .linha"
+      ".direto-metro .linha",
     );
 
     const data = Array.from(lines).map((line) => {
       const numberBlock = line.querySelector(
-        ".linha-numero"
+        ".linha-numero",
       ) as unknown as HTMLDivElement;
       const info = line.querySelector(".linha-info");
       const bsTitle = info?.getAttribute("data-bs-title") ?? "";
@@ -30,7 +30,7 @@ export async function fetchTrainDataFromMetro() {
 
       const color = numberBlock.style.backgroundColor;
       const statusBubble = line.querySelector(
-        ".linha-situacao-icon"
+        ".linha-situacao-icon",
       ) as unknown as HTMLDivElement;
       const statusColor = statusBubble.style.backgroundColor;
 

@@ -1,7 +1,7 @@
-import { fetchTrainDataFromCPTM } from "@/app/lib/cptm";
-import { lines } from "@/app/lib/processedData/constants";
-import { ProcessedDataLine } from "@/app/lib/processedData/types";
-import { getStatus } from "@/app/lib/processedData/utils";
+import { fetchTrainDataFromCPTM } from "@/server/lib/cptm";
+import { lines } from "@/server/lib/processedData/constants";
+import { ProcessedDataLine } from "@/server/lib/processedData/types";
+import { getStatus } from "@/server/lib/processedData/utils";
 
 export async function processCPTMLines() {
   const cptmLines = lines.filter((line) => line.company === "cptm");
