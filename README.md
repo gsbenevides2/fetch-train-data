@@ -15,6 +15,7 @@ Este projeto fornece uma API unificada para consultar o status operacional de to
 | 3     | Vermelha  | Metrô               |
 | 4     | Amarela   | CCR (ViaMobilidade) |
 | 5     | Lilás     | CCR (ViaMobilidade) |
+| 6     | Laranja   | LinhaUni            |
 | 7     | Rubi      | TIC Trens           |
 | 8     | Diamante  | CCR (ViaMobilidade) |
 | 9     | Esmeralda | CCR (ViaMobilidade) |
@@ -128,7 +129,7 @@ Retorna os dados brutos da API de uma operadora específica.
 
 **Parâmetros:**
 
-- `company`: `metro`, `cptm`, `ccr` ou `tic`
+- `company`: `metro`, `cptm`, `ccr`, `tic` ou `liauni`
 
 #### `GET /api/brute-data/all`
 
@@ -158,6 +159,7 @@ app/
 ├── lib/
 │   ├── ccr/               # Integração com API da CCR
 │   ├── cptm/              # Integração com API da CPTM
+│   ├── liauni/            # Integração com API da LinhaUni
 │   ├── metro/             # Scraping do site do Metrô
 │   ├── tic/               # Integração com API do TIC Trens
 │   └── processedData/     # Processamento e padronização dos dados
@@ -176,6 +178,7 @@ app/
 - **CPTM**: API oficial https://api.cptm.sp.gov.br
 - **CCR/ViaMobilidade/Via Quatro**: API https://webapi.grupoccr.com.br
 - **TIC Trens**: API https://www.tictrens.com.br
+- **LinhaUni**: API https://www.linhauni.com.br
 
 ## 👤 Autor
 
