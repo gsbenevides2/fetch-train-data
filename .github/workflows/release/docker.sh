@@ -23,7 +23,7 @@ echo "Logando no Github Container Registry..."
 echo "${TOKEN_GITHUB}" | docker login ${REGISTRY} -u "${REPO_OWNER}" --password-stdin
 
 echo "Construindo e publicando imagem Docker com tag ${VERSION}..."
-docker build -t "${VERSION_TAG}" .
+docker build --label "org.opencontainers.image.source=https://github.com/${REPO_OWNER}/${REPO_NAME}" -t "${VERSION_TAG}" .
 
 echo "Imagem Docker construída com tag ${VERSION_TAG}, marcando também como ${LATEST_TAG}, ${MINOR_TAG}, ${MAJOR_TAG}..."
 docker tag "${VERSION_TAG}" "${LATEST_TAG}"
