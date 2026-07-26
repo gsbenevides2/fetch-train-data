@@ -10,6 +10,7 @@ export const DefaultModel = {
       ccr: "ccr",
       tic: "tic",
       liauni: "liauni",
+      triviatrens: "triviatrens",
     }),
   }),
   // Get Processed Data Response

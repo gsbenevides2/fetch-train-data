@@ -8,7 +8,7 @@ export interface ProcessedDataLine {
 
 export type Status = "OK" | "WARNING" | "CRITICAL" | "UNKNOWN";
 
-export type Companies = "metro" | "cptm" | "ccr" | "tic" | "liauni";
+export type Companies = "metro" | "cptm" | "ccr" | "tic" | "liauni" | "triviatrens";
 
 export interface LineData {
   code: number;
