@@ -6,7 +6,6 @@
       "name": "fetch-train-data",
       "dependencies": {
         "@elysia/openapi": "^1.4.15",
-        "@elysiajs/openapi": "^1.4.15",
         "elysia": "^1.4.29",
         "happy-dom": "^20.11.1",
         "next": "16.1.1",
@@ -64,8 +63,6 @@
     "@borewit/text-codec": ["@borewit/text-codec@0.2.1", "", {}, "sha512-k7vvKPbf7J2fZ5klGRD9AeKfUvojuZIQ3BT5u7Jfv+puwXkUBUT5PVyMDfJZpy30CBDXGMgw7fguK/lpOMBvgw=="],
 
     "@elysia/openapi": ["@elysia/openapi@1.4.15", "", { "peerDependencies": { "elysia": ">= 1.4.0" } }, "sha512-MrVGCPo5hnRF4/yWGOyH5ddjt4DlSIbeC5rrkupQtHY8TEQe+XdJa2YM9aUOrtgtRcy4UNGyiVlLl/jllPkPQA=="],
-
-    "@elysiajs/openapi": ["@elysiajs/openapi@1.4.15", "", { "peerDependencies": { "elysia": ">= 1.4.0" } }, "sha512-HDtGIrWfFJk6UJS7qbgRmjifbSqnnRGDM3CsU/GVJkxLbEVEkNuQDf+Quh9fGbytSrJ8g4+tX9eVjshYhCH29w=="],
 
     "@emnapi/core": ["@emnapi/core@1.8.1", "", { "dependencies": { "@emnapi/wasi-threads": "1.1.0", "tslib": "^2.4.0" } }, "sha512-AvT9QFpxK0Zd8J0jopedNm+w/2fIzvtPKPjqyw9jwvBaReTTqPBk9Hixaz7KbjimP+QNz605/XnjFcDAL2pqBg=="],
 
