@@ -3,6 +3,7 @@ import { fetchTrainDataFromCPTM } from "@/server/lib/cptm";
 import { fetchTrainDataFromMetro } from "@/server/lib/metro";
 import { fetchTrainDataFromTIC } from "@/server/lib/tic";
 import { fetchTrainDataFromLiaUni } from "@/server/lib/liauni";
+import { fetchTrainDataFromTriviaTrens } from "@/server/lib/triviatrens";
 import {
   CompanyFethersObjects,
   CompanyProcessorsObjects,
@@ -13,6 +14,7 @@ import { processCPTMLines } from "@/server/lib/processedData/cptm";
 import { processCCRLines } from "@/server/lib/processedData/ccr";
 import { processTICLines } from "@/server/lib/processedData/tic";
 import { processLiaUniLines } from "@/server/lib/processedData/liauni";
+import { processTriviaTrensLines } from "@/server/lib/processedData/triviatrens";
 
 export const companiesFetchers: CompanyFethersObjects = {
   metro: fetchTrainDataFromMetro,
@@ -20,6 +22,7 @@ export const companiesFetchers: CompanyFethersObjects = {
   ccr: fetchTrainDataFromCCR,
   tic: fetchTrainDataFromTIC,
   liauni: fetchTrainDataFromLiaUni,
+  triviatrens: fetchTrainDataFromTriviaTrens,
 };
 
 export const companiesProcessors: CompanyProcessorsObjects = {
@@ -28,9 +31,15 @@ export const companiesProcessors: CompanyProcessorsObjects = {
   ccr: processCCRLines,
   tic: processTICLines,
   liauni: processLiaUniLines,
+  triviatrens: processTriviaTrensLines,
 };
 
 export const lines: LineData[] = [
+  {
+    code: 0,
+    color: "Preta",
+    company: "triviatrens",
+  },
   {
     code: 1,
     color: "Azul",
@@ -84,17 +93,17 @@ export const lines: LineData[] = [
   {
     code: 11,
     color: "Coral",
-    company: "cptm",
+    company: "triviatrens",
   },
   {
     code: 12,
     color: "Safira",
-    company: "cptm",
+    company: "triviatrens",
   },
   {
     code: 13,
     color: "Jade",
-    company: "cptm",
+    company: "triviatrens",
   },
   {
     code: 15,

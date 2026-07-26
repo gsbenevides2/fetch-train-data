@@ -2,7 +2,7 @@
   "name": "@gsbenevides2/fetch-train-data",
   "displayName": "Fetch Train Data",
   "description": "Fetch train data from the metropolitan train in the city of São Paulo.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": false,
   "license": "MIT",
   "types": "./dist/server/index.d.ts",
